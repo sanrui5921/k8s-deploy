@@ -23,7 +23,6 @@ k8s-dns-sidecar-amd64:${DNS_VERSION}
 k8s-dns-kube-dns-amd64:${DNS_VERSION}
 k8s-dns-dnsmasq-nanny-amd64:${DNS_VERSION})
 
-
 for imageName in ${images[@]} ; do
   docker pull $ALIYUN_URL/$imageName
   docker tag  $ALIYUN_URL/$imageName $GCR_URL/$imageName
