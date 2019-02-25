@@ -2,7 +2,6 @@
 
 set -e
 
-
 # Pull flannel images from Aliyun
 docker pull registry.cn-shenzhen.aliyuncs.com/cookcodeblog/flannel:v0.10.0-amd64
 docker tag registry.cn-shenzhen.aliyuncs.com/cookcodeblog/flannel:v0.10.0-amd64 quay.io/coreos/flannel:v0.10.0-amd64
