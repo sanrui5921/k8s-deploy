@@ -25,7 +25,7 @@ sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/cen
 # Install docker
 # on a new system with yum repo defined, forcing older version and ignoring obsoletes introduced by
 yum install -y --setopt=obsoletes=0 \
-   docker-ce \
+   docker-ce-18.06.3.ce-3.el7 docker-client-18.06.3.ce-3.el7 docker-common-18.06.3.ce-3.el7\
 
 systemctl enable docker
 systemctl start docker

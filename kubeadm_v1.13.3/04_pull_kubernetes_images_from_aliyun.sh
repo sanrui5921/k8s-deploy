@@ -32,6 +32,3 @@ for imageName in ${images[@]} ; do
 done
 
 docker images
-
-
-
