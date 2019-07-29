@@ -7,22 +7,14 @@ set -e
 # For running kubeadm without an internet connection you have to pre-pull the required master images for the version of choice:
 KUBE_VERSION=v1.13.3
 KUBE_PAUSE_VERSION=3.1
-ETCD_VERSION=3.2.24
-CORE_DNS_VERSION=1.2.6
 
 GCR_URL=k8s.gcr.io
-#ALIYUN_URL=registry.cn-hangzhou.aliyuncs.com/ckubernetes
-ALIYUN_URL=registry.cn-hangzhou.aliyuncs.com/google_containers
+ALIYUN_URL=registry.cn-hangzhou.aliyuncs.com/ckubernetes
 
 # When test v1.11.0, I found Kubernetes depends on both pause-amd64:3.1 and pause:3.1 
 
 images=(kube-proxy:${KUBE_VERSION}
-kube-scheduler:${KUBE_VERSION}
-kube-controller-manager:${KUBE_VERSION}
-kube-apiserver:${KUBE_VERSION}
-pause:${KUBE_PAUSE_VERSION}
-etcd:${ETCD_VERSION}
-coredns:${CORE_DNS_VERSION})
+pause:${KUBE_PAUSE_VERSION})
 
 
 for imageName in ${images[@]} ; do
@@ -32,6 +24,4 @@ for imageName in ${images[@]} ; do
 done
 
 docker images
-
-
 

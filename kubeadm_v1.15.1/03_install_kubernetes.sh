@@ -6,7 +6,7 @@ set -e
 
 #setenforce 0
 yum install -y kubernetes-cni-0.7.5-0.x86_64
-yum install -y kubelet-1.13.3 kubeadm-1.13.3 kubectl-1.13.3
+yum install -y kubelet-1.15.1 kubeadm-1.15.1 kubectl-1.15.1
 systemctl enable kubelet && systemctl start kubelet
 
 # Configure cgroup matched with Docker
